@@ -1,4 +1,8 @@
 <?php
+    // This part should only be done once, you should store the access_token along with
+    // its corresponding subscriber_number somewhere safe and then just use that
+    // when performing SMS requests, but to keep this example simple we just
+    // request it every time.
     $request = curl_init('https://developer.globelabs.com.ph/oauth/access_token?app_id=' . getenv('APP_ID') . '&app_secret=' . getenv('APP_SECRET') . '&code=' . $_GET['code']);
     curl_setopt($request, CURLOPT_POST, 1);
     curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
