@@ -23,6 +23,3 @@
     ));
     $response = json_decode(curl_exec($request), true);
     curl_close($request);
-
-    var_dump($response);
-    die();
